@@ -1,0 +1,16 @@
+api_key: ""
+api_secret: ""
+deeplynx_url: ""
+data_retention_days: 30
+refresh_interval: 5
+debug: true
+db_path: "./test.db"
+data_sources:
+  - data_source_id: 1
+    container_id: 1
+    name: "name must be lowercase, contain no spaces, and only have _ as special characters"
+    timestamp_column_name: "name of timestamp or primary index name"
+    secondary_index: "secondary column index, helpful when rows share same timestamp but are indexed, initial value is 0"
+    initial_timestamp: "optional timestamp, if not included will default to 1 day"
+    initial_index_start:  0 # initial index value to start search on will default to timestamp if this value is not provided
+
